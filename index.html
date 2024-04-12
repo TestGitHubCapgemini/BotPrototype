@@ -535,17 +535,17 @@
 		embedded_svc.menu.settings.language = 'en'; //For example, enter 'en' or 'en-US'
 
 		embedded_svc.menu.init(
-			'https://psa-customerfirst--kang.sandbox.my.salesforce.com',
-			'https://d.la1-c1cs-ar3.salesforceliveagent.com/chat',
+			'https://psa-customerfirst--vision.sandbox.my.salesforce.com',
+			'https://d.la2-c1cs-fra.salesforceliveagent.com/chat',
 			gslbBaseURL,
-			'00D3L00000011rz',
+			'00D3N000000HL93',
 			'Bot_IT_AP'
 		);
 	};
 
 	if (!window.embedded_svc || !window.embedded_svc.menu) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://psa-customerfirst--kang.sandbox.my.salesforce.com/embeddedservice/menu/fab.min.js');
+		s.setAttribute('src', 'https://psa-customerfirst--vision.sandbox.my.salesforce.com/embeddedservice/menu/fab.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
