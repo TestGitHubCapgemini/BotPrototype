@@ -661,6 +661,47 @@ div#esw-menu-opened-fab-icon{
 .slds-input-has-icon .slds-input__icon {
     fill: #aeaeae;
 }
+
+.slds-datepicker.slds-dropdown.slds-dropdown_left{
+	position: fixed;
+    z-index: 9121;
+    left: -3px;
+    right: auto;
+    top: 151px;
+
+}
+
+.slds-dropdown-trigger--click.slds-is-open .slds-dropdown, .slds-dropdown-trigger_click.slds-is-open .slds-dropdown {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.slds-datepicker {
+    padding: 0;
+    font-size: .75rem;
+}
+
+.slds-dropdown {
+    position: absolute;
+    z-index: 7000;
+    left: 50%;
+    float: left;
+    min-width: 6rem;
+    max-width: 20rem;
+    margin-top: .125rem;
+    margin-bottom: .125rem;
+    border: 1px solid #e5e5e5;
+    border-radius: .25rem;
+    padding: .25rem 0;
+    font-size: .75rem;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .16);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .16);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #181818;
+}
        
 </style>
 
