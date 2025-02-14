@@ -239,102 +239,389 @@
 	<link rel="stylesheet" href="https://psa-customerfirst--vision.sandbox.my.salesforce.com/sfc/p/bd000001Mfrx/a/bd000000O96z/uqAOJWkh9ckF8z77YB6ZGqyBZt43cCzTksJYcjpQLrI"/>
       <style type='text/css'>
 		/*@import url('https://psa-customerfirst--c.vf.force.com/resource/1670933538000/SnY_slds_mod_min_css/slds.min.css');*/
+/******************************************************************************************/
+/*Snippet*/
+/******************************************************************************************/
+div#esw-channelmenu{
+    z-index: 2;
+}
+header#esw-channelmenu_header{
+	z-index: 2;
+}
 
-        .embeddedServiceHelpButton .helpButton .uiButton {
-          background-color: transparent !important;
-          font-family: "Arial", sans-serif;
-        }
+.dockableContainer.showDockableContainer{
+    z-index: 15;
+}
 
-        .embeddedServiceHelpButton .helpButton .uiButton {
-          /* background-color: transparent !important;  */
-          font-family: "Salesforce Sans", sans-serif !important;
-        }
+/******************************************************************************************/
+/*Brand Things*/
+/******************************************************************************************/
+div#embedded-service{
+	font-family: "Arial", sans-serif;
+}
 
-        .embeddedServiceHelpButton .helpButton .uiButton:focus {
-         /* outline: 1px solid #5820D5 !important; */
-        }
-	      
-	      
-         @media only screen and (min-width: 48em) {
-	   .embeddedServiceHelpButton .helpButton .uiButton:hover::before,
-		 .embeddedServiceHelpButton .helpButton .uiButton:focus::before
-		 {
-		border-radius: 50% !important; 
-	     }
-	 }
-  
+header#esw-channelmenu_header{
+	color: #EDEEF2; /*Font Color*/
+	background-color: #7A99AC; /*Background Color*/
+	font-family: "Arial", sans-serif;
+}
 
-        @font-face {
-          font-family: 'Salesforce Sans' !important;
-          src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
-            url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype') !important;
-        }
+header#esw-channelmenu_header h2{
+    color: #EDEEF2;
+    font-family: "Arial", sans-serif;
+}
+header#esw-channelmenu_header p{
+    color: #EDEEF2;
+    font-family: "Arial", sans-serif;
+}
+ul#esw-channelmenu_ctas{
+    
+    font-family: "Arial", sans-serif;
+    color: #212529;
+}
+ul#esw-channelmenu_ctas li{
+    font-family: "Arial", sans-serif;
+    color: #212529;
+}
+ul#esw-channelmenu_ctas li a{
+    font-family: "Arial", sans-serif;
+    color: #000000;
+}
+ul#esw-channelmenu_ctas li a div{
+    color: #000000;
+}
+button#esw-fab{
+    background-color: #7A99AC;
+    color: #FFF;
+    
+}
 
-        span.message{
-          display:none;
-        }
+div#esw-menu-closed-fab-icon{
+    color: #FFF;
+}
 
-       button.sidebarHeader.minimizedContainer.embeddedServiceSidebarMinimizedDefaultUI {
-		 background-image: url('https://www.jeep.at/content/dam/omnichannel-aem/cross/livechat/headset_icon_chatbot_jeep.png') !important;
-		 background-position: center;
-		 background-size: 70px;
-		 background-repeat: no-repeat !important;
-		 background-color: transparent !important;
-		 height: 70px !important;
-		 width: 70px !important;
-		 border-radius: 50% !important;
-		 min-height: 60px !important;
-		 min-width: 60px !important;
-		 margin: 30px;
-		 border-style: none;
-		 box-shadow: none !important;
- }
+div#esw-menu-opened-fab-icon{
+    color: #FFF;
+}
+.dockableContainer.showDockableContainer{
+    font-family: var(--lwc-fontFamily, "Arial"), sans-serif;
+}
 
-        .embeddedServiceHelpButton .helpButton .uiButton{
-	    background-image: url('https://www.jeep.at/content/dam/omnichannel-aem/cross/livechat/headset_icon_chatbot_jeep.png') !important;
-	    background-position: center;
-	    background-color: transparent !important;
-	    background-size: 50px;
-	    background-repeat: no-repeat !important;
-	    width: 40px !important;
-	    height: 40px !important;
-	    border-radius: 50% !important;
-	    min-height: 60px !important;
-	    min-width: 60px !important;
-	    box-shadow: none !important;
+.embeddedServiceSidebarMinimizedDefaultUI.helpButton {
+    font-family: "Arial", sans-serif;
+}
 
-        }
+.embeddedServiceHelpButton .helpButton .uiButton {
+    font-family: "Arial", sans-serif;
+}
 
-        @keyframes pulse-blue {
-          0%   {transform: scale(0.95);box-shadow: 0 0 0 0 var(--lwc-colorBackgroundButtonBrand,rgb(0, 163, 224));}
-          70%  {transform: scale(1.0);box-shadow: 0 0 0 20px rgb(0 126 219 / 0%);}
-          100% {transform: scale(0.95);box-shadow: 0 0 0 0 rgb(0 126 219 / 0%);}
-        }
+/******************************************************************************************/
+/*General Things*/
+/******************************************************************************************/
+div#embedded-service {
+    font-size: 16px;
+}
 
-        .embeddedServiceHelpButton .embeddedServiceIcon{
-          visibility : hidden;
-        }
+div#esw-channelmenu{
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: visible;
+    min-width: 320px;
+    max-width: 320px;
+    background-color: #FFF;
+    box-shadow: 8px 8px 15px 0 rgba(54,54,54,0.50);
+    border-radius: 6px;
+	font-size: 16px;
+}
+header#esw-channelmenu_header{
+	width: 100%;
+    max-width: 100%;
+    min-height: 75px;
+    box-sizing: border-box;
+    padding: 20px 24px;
+    margin: 0;
+    background-size: 100% 100%;
+    background-repeat: repeat;
+    text-align: left;
+    line-height: 1.2;
+    overflow: inherit;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
 
-        .embeddedServiceHelpButton .helpButton{
-         /* height : 90px; */
-	    margin-right: 20px;
-	    margin-bottom: 60px;
-        }
+header#esw-channelmenu_header h2{
+	font-size: 1.25em;
+    font-weight: bolder;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: left;
+}
 
-        h2[embeddedService-chatHeader_chatHeader] {
-          font-size : 13px !important;
-        }
-      </style>
+header#esw-channelmenu_header p{
+    font-size: 0.875em;
+    letter-spacing: 0.0285em;
+    margin: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: left;
+}
+ul#esw-channelmenu_ctas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+    border-radius: 6px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    background-color: #FFFFFF;
+}
 
+ul#esw-channelmenu_ctas li{
+    width: 100%;
+    min-height: 60px;
+    box-sizing: border-box;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+    border-bottom: 0.2px solid;
+    border-bottom-color: #DCDCDC;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
 
-<style type='text/css'>
-	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
-	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
-	}
+ul#esw-channelmenu_ctas li a{
+    display: flex;
+    height: 100%;
+    padding: 14px 0 14px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+ul#esw-channelmenu_ctas li a div{
+    height: 32px;
+    max-height: 32px;
+    width: 80px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+button#esw-fab{
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    outline: 0;
+    border: none;
+    box-shadow: 2px 2px 5px 0 rgba(45, 45, 45, 0.5);
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    z-index: 2;
+    margin: 0;
+}
+
+div#esw-menu-closed-fab-icon{
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+    text-align: center;
+    text-transform: none;
+}
+div#esw-menu-opened-fab-icon{
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+    text-align: center;
+    text-transform: none;
+}
+.dockableContainer.showDockableContainer{
+    position: fixed;
+    left: auto;
+    bottom: 100px;
+    right: 30px;
+    margin: 0;
+    height: 90%;
+    width: var(--lwc-sidebarWidth, 320px);
+    max-height: var(--lwc-sidebarHeight, 498px);
+    border-radius: 8px 8px 8px 8px;
+    text-align: center;
+    overflow: hidden;
+    pointer-events: all;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 24px); 
+}
+
+.chat-icon-bar {
+    position: fixed;
+    top: 82%;
+    right: 12px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.circle {
+    width: var(--iconSize);
+    height: var(--iconSize);
+    border-radius: 50%;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 50%);
+    border: 6px solid var(--brandColor);
+}
+
+.circle:hover {
+    cursor: pointer;
+}
+
+.embeddedServiceHelpButton .helpButton .uiButton {
+    background-color: var(--brandColor);
+    width: var(--iconSize);
+    height: var(--iconSize);
+    border-radius: 50%;
+    min-width: 5em;
+}
+
+.embeddedServiceHelpButton .helpButton .uiButton .helpButtonLabel {
+    display: none;
+}
+
+.embeddedServiceHelpButton .helpButton .uiButton .embeddedServiceIcon {
+    margin: auto;
+}
+
+.embeddedServiceHelpButton .embeddedServiceIcon::before {
+    font-size: 2.5em;
+    display: block;
+}
+
+.embeddedServiceHelpButton .helpButton .uiButton:focus {
+    outline: 1px solid var(--brandColor);
+    min-width: 5em;
+    border-radius: 50%;
+}
+
+.embeddedServiceSidebarMinimizedDefaultUI.helpButton {
+    border-radius: 50% !important;
+    min-width: 3.2em !important;
+    width: var(--iconSize) !important;
+    height: var(--iconSize) !important;
+}
+
+.embeddedServiceSidebarMinimizedDefaultUI .minimizedText {
+    display: none;
+}
+
+.embeddedServiceSidebarMinimizedDefaultUI .content {
+    padding: 0 0px;
+}
+
+.embeddedServiceSidebarMinimizedDefaultUI {
+    width: var(--iconSize) !important;
+    height: var(--iconSize) !important;
+    border-radius: 10% !important;
+    min-width: 7em !important;
+}
+
+.message {
+    padding: 1px 1px 1px 1px;
+    margin: 0px 0px;
+    border-style: none;
+}
+
+.embeddedServiceIcon svg {
+    font-size: 2.2em !important;
+}
+
+.embeddedServiceSidebarMinimizedDefaultUI .messageContent {
+    min-width: 3.2em;
+}
+
+.closeButton {
+    padding: 4px 6px 1px 6px;
+}
+
+.minimizeButton {
+    padding: 1px 6px 1px 6px;
+}
+
+.cChryslerConnect_PreChat input.slds-input {
+    font-size: 13px !important;
+    border-radius: 4px !important;
+    padding: 0 12px 0 16px !important;
+    line-height: 30px !important;
+    width: 90% !important;
+}
+
+.cChryslerConnect_PreChat select.select {
+    font-size: 13px !important;
+    height: 32px !important;
+}
+
+.embeddedServiceHelpButton {
+    z-index: 1001;
+}
+
+.embeddedServiceHelpButton .helpButton {
+    bottom: 14% !important;
+    width: var(--iconSize) !important;
+    height: var(--iconSize) !important;
+}
+
+.embeddedServiceSidebarMinimizedDefaultUI.helpButton {
+    bottom: 14% !important;
+    width: var(--iconSize) !important;
+    height: var(--iconSize) !important;
+}
+
+.embeddedServiceSidebarMinimizedDefaultUI {
+    bottom: 14% !important;
+    width: var(--iconSize) !important;
+    height: var(--iconSize) !important;
+}
+       
 </style>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/menu/fab.min.js'></script>
