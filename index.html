@@ -639,6 +639,28 @@ div#esw-menu-opened-fab-icon{
     transition: border .1s linear, background-color .1s linear;
     display: inline-block;
 }
+.slds-input-has-icon .slds-input__icon:not(button) {
+    pointer-events: none;
+}
+
+.slds-input-has-icon_right .slds-input__icon {
+    right: .75rem;
+}
+
+.slds-input-has-icon .slds-input__icon {
+    width: .875rem;
+    height: .875rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -.4375rem;
+    line-height: 1;
+    border: 0;
+    z-index: 2;
+}
+
+.slds-input-has-icon .slds-input__icon {
+    fill: #aeaeae;
+}
        
 </style>
 
