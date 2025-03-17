@@ -225,29 +225,40 @@
     </div>
   </div>
 	
+<!-- Embedded Service <-> LWC Wrapper -->
+      <script>
+          window.addEventListener("message", function(event) {
+              var payload = event.data;
+              if (payload && payload.type === "chasitor.sendMessage") {
+                  embedded_svc.postMessage("chasitor.sendMessage", payload.message);
+              }
+          },
+              false
+          );
+      </script>
 <!-- Embedded Service ChatBot Styles -->
 	<link rel="stylesheet" href="https://psa-customerfirst--vision.sandbox.my.salesforce.com/file-asset-public/chatbotMainCSScss?oid=00Dbd000001Mfrx"/>
-	<link rel="stylesheet" href="https://psa-customerfirst--vision.sandbox.my.salesforce.com/file-asset-public/chatbotBrandCSSACcss?oid=00Dbd000001Mfrx"/>
+	<link rel="stylesheet" href="https://psa-customerfirst--vision.sandbox.my.salesforce.com/file-asset-public/chatbotBrandCSSJEcss?oid=00Dbd000001Mfrx"/>
 	<link rel="stylesheet" href="https://psa-customerfirst--vision.sandbox.my.salesforce.com/file-asset-public/sldsmincss?oid=00Dbd000001Mfrx"/>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/menu/fab.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		// Required if you want labels in a language that’s different from your user’s context.
-		//embedded_svc.menu.settings.language = ''; //For example, enter 'en' or 'en-US'
+		embedded_svc.menu.settings.language = 'fr'; //For example, enter 'en' or 'en-US'
 
 		embedded_svc.menu.init(
-			'https://psa-customerfirst--devmr313.sandbox.my.salesforce.com',
-			'https://d.la12s-core1.sfdc-urlt2q.salesforceliveagent.com/chat',
+			'https://psa-customerfirst.my.salesforce.com',
+			'https://d.la11-core1.sfdc-urlt2q.salesforceliveagent.com/chat',
 			gslbBaseURL,
-			'00Dbd000001VOlR',
-			'Bot_AT_FT'
+			'00D0O000000YvX4',
+			'Bot_FR_JE'
 		);
 	};
 
 	if (!window.embedded_svc || !window.embedded_svc.menu) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://psa-customerfirst--devmr313.sandbox.my.salesforce.com/embeddedservice/menu/fab.min.js');
+		s.setAttribute('src', 'https://psa-customerfirst.my.salesforce.com/embeddedservice/menu/fab.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
